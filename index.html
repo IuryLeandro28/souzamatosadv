@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Célia Souza Matos - Divórcio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        fadeIn: 'fadeIn 2s ease-in-out',
+                        slideIn: 'slideIn 1s ease-in-out',
+                        bounceIn: 'bounceIn 1s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideIn: {
+                            '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        bounceIn: {
+                            '0%': { transform: 'scale(0.8)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' }
+                        }
+                    },
+                    colors: {
+                        'dark-blue': '#001f3d',  // Azul escuro
+                        'white': '#ffffff',     // Branco
+                    }
+                }
+            }
+        }
+
+        
+    </script>
+
+    <!-- Estilo para as estrelas -->
+    <style>
+        .star {
+            color: gold;
+            font-size: 24px;
+        }
+
+        #contato {
+            background-size: cover;
+            background-position: center;
+        }
+       
+          
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 70px;
+            height: 70px;
+            background-color: #25D366; /* Cor de fundo */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+          }
+          
+          .whatsapp-button img {
+            width: 60px; /* Ajuste o tamanho da imagem conforme necessário */
+            height: 60px; /* Ajuste o tamanho da imagem conforme necessário */
+            object-fit: contain; /* Faz a imagem se ajustar sem distorcer */
+          }
+          
+          .notification {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 15px;
+            height: 15px;
+            background-color: #FF4B5C;
+            border-radius: 50%;
+            display: none;
+            animation: blink 1s infinite;
+          }
+          
+          @keyframes blink {
+            0% {
+              opacity: 1;
+            }
+            50% {
+              opacity: 0.3;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+          
+          .whatsapp-button:hover {
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.7);
+          }
+          
+          .bg-gold {
+            background-color: #FFD700; /* Cor dourada */
+        }
+        
+        .hover\:bg-gold-hover:hover {
+            background-color: #E6C100; /* Cor dourada mais escura para o efeito de hover */
+        }
+
+            /* Animações suaves para as imagens */
+        .animate__fadeInUp {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Efeito de zoom nas imagens */
+        .transition-transform {
+            transition: transform 0.3s ease;
+        }
+          
+        .animate__fadeInUp {
+        animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Efeito de zoom suave nas imagens */
+    .transition-transform {
+        transition: transform 0.3s ease;
+    }
+
+    .rounded-full {
+        border-radius: 50%;
+    }.animate__fadeInUp {
+        animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Efeito de zoom suave nas imagens */
+    .transition-transform {
+        transition: transform 0.3s ease;
+    }
+
+    .rounded-full {
+        border-radius: 50%;
+    }
+
+    .animate__fadeInUp {
+        animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Efeito de zoom suave nas imagens */
+    .transition-transform {
+        transition: transform 0.3s ease;
+    }
+
+    .rounded-full {
+        border-radius: 50%;
+    }
+    </style>
+
+</head>
+<body class="bg-white">
+    <!-- Navbar -->
+ <!--   <header class="bg-dark-blue text-white shadow-md fixed w-full z-10 transition-all duration-300 ease-in-out">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        </div>
+    </header>
+    -->
+
+    <!-- Hero Section -->
+    <section id="inicio" class="h-screen flex items-center justify-center bg-cover bg-center relative" style="background-image: url('https://estaticos.animaeducacao.com.br/article/428aa013-6547-49b6-9a51-2b4ea7fe6ffa/2.webp');">
+
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div> <!-- Sobreposição escura para contraste -->
+        <img src="file:///C:/Users/iury/Desktop/Projetos/Patricia/novo_site/imagens/logo_branca.png" 
+        alt="Logo" 
+        class="absolute top-10 left-4 w-[200px] h-auto md:w-[300px] lg:w-[340px]">
+
+        <div class="text-center text-white p-10 md:p-16 relative z-10 rounded-lg animate-fadeIn">
+
+
+            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight animate-slideIn">
+                Encontre a Paz que Você Merece <br class="md:hidden"> Com Profissionais Especializados
+            </h2>
+            <p class="mt-6 text-lg md:text-2xl animate-slideIn">
+                Soluções personalizadas para o seu caso. <br> Apoio jurídico com empatia e respeito para cada família.
+            </p>
+            
+            <p class="mt-6 text-xl font-semibold text-yellow-400 animate-slideIn">
+                O primeiro passo para a resolução está a apenas uma mensagem de distância!
+            </p>
+    
+            <a href="https://wa.me/55619992477498" target="_blank" class="mt-8 inline-block px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center animate-pulse transform hover:scale-105">
+                <img src="file:///C:/Users/iury/Desktop/Projetos/Patricia/novo_site/imagens/icons8-whatsapp-50.png" alt="WhatsApp" class="w-12 h-12 mr-3 whatsapp-icon">
+                Fale agora com um especialista!
+            </a>
+            
+            <style>
+                /* Muda a imagem ao passar o mouse */
+                a:hover .whatsapp-icon {
+                    content: url('file:///C:/Users/iury/Desktop/Projetos/Patricia/novo_site/imagens/wpp_2.png');
+                }
+            </style>
+    
+            <p class="mt-4 text-sm text-gray-300 animate-slideIn">
+                Confiança e discrição são nossa prioridade. Todos os casos tratados com total sigilo e seriedade.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Serviços -->
+    <section id="servicos" class="py-16 bg-blue-50">
+        <div class="container mx-auto text-center">
+            <h3 class="text-2xl font-bold text-dark-blue" data-aos="fade-up">Nossos Serviços</h3>
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300" data-aos="fade-up">
+                    <a href="https://wa.me/55619992477498" target="_blank">
+                        <img src="https://images.unsplash.com/photo-1711991812224-78eab2a3ee0d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGl2b3JpY2lvJTIwY29uc2Vuc3VhbHxlbnwwfHwwfHx8MA%3D%3D" alt="Divórcio Consensual" class="rounded-md mb-4 transition-transform transform hover:scale-105">
+                    </a>
+                    <h4 class="text-lg font-semibold">Divórcio Consensual</h4>
+                    <p class="mt-2 text-gray-600">Ajudamos a resolver divórcios de forma amigável e rápida.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <a href="https://wa.me/55619992477498" target="_blank">
+                        <img src="https://advocaciareis.adv.br/wp-content/uploads/2023/08/divorciolitigioso.webp" alt="Divórcio Litigioso" class="rounded-md mb-4 transition-transform transform hover:scale-105">
+                    </a>
+                    <h4 class="text-lg font-semibold">Divórcio Litigioso</h4>
+                    <p class="mt-2 text-gray-600">Orientação e defesa jurídica em divórcios contenciosos e complexos.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://wa.me/55619992477498" target="_blank">
+                        <img src="https://laurabrito.com.br/wp-content/uploads/2023/12/Como-se-preparar-para-um-acordo-de-divorcio-1.jpg" alt="Acordos de Pensão Alimentícia" class="rounded-md mb-4 transition-transform transform hover:scale-105">
+                    </a>
+                    <h4 class="text-lg font-semibold">Acordos de Pensão Alimentícia</h4>
+                    <p class="mt-2 text-gray-600">Auxiliamos na negociação e formalização de acordos de pensão alimentícia.</p>
+                </div>
+            </div>
+            <a href="https://wa.me/55619992477498" target="_blank" 
+            class="mt-8 inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow-lg 
+                   hover:bg-blue-700 hover:text-white transition-all duration-300 transform hover:scale-105">
+             <img src="file:///C:/Users/iury/Desktop/Projetos/Patricia/novo_site/imagens/wpp_2.png" 
+                  alt="WhatsApp" class="w-12 h-12 mr-3 whatsapp-icon- transition-all duration-300">
+             Fale agora com um especialista!
+         </a>
+         
+         
+        </div>
+    </section>
+
+    <!-- Quem somos -->
+    <section id="sobre" class="py-16 bg-white">
+        <div class="container mx-auto text-center md:flex md:items-center md:justify-between">
+            <div class="md:w-1/2 text-left px-6" data-aos="fade-right" data-aos-duration="1000">
+                <h3 class="text-3xl font-semibold text-dark-blue">Quem é Souza Matos?</h3>
+                <p class="mt-4 text-lg text-gray-600">
+                    Souza Matos é um escritório de advocacia especializado em divórcios, disputas familiares e resolução de conflitos. Com mais de 10 anos de experiência, nossa equipe se dedica a oferecer soluções eficazes, rápidas e empáticas para cada cliente.
+                </p>
+                <p class="mt-4 text-lg text-gray-600">
+                    Acreditamos na importância de uma abordagem humana e personalizada, onde o bem-estar e os direitos de nossos clientes são nossa principal prioridade. Nossa missão é garantir que o processo legal seja o menos estressante possível, proporcionando segurança e tranquilidade.
+                </p>
+                <p class="mt-4 text-lg text-gray-600">
+                    Seja para questões de divórcio, guarda de filhos, partilha de bens ou outros conflitos familiares, estamos aqui para auxiliar, aconselhar e representar nossos clientes com profissionalismo e dedicação.
+                </p>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0 text-center" data-aos="fade-left" data-aos-duration="1000">
+                <div class="mx-auto w-80 h-96 bg-gray-100 shadow-xl rounded-2xl overflow-hidden relative transform transition duration-300 hover:scale-105">
+                    <img src="file:///C:/Users/iury/Desktop/Projetos/Patricia/novo_site/imagens/advogado.jpg" 
+                        alt="Equipe Souza Matos" 
+                        class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 bg-gradient-to-t from-black/70 to-transparent w-full p-4">
+                        <h4 class="text-white font-semibold text-lg">Profissionalismo e Dedicação</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+   
+      
+    </section>
+
+
+
+    
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="py-16 bg-light-gray text-dark-blue">
+        <div class="container mx-auto text-center">
+            <h3 class="text-2xl font-bold animate-fadeIn">O que nossos clientes dizem</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                <!-- Depoimento 1 -->
+                <div class="ti-review-item source-Google">
+                    <div class="ti-inner">
+                        <div class="ti-review-header flex justify-center flex-col items-center">
+                            <div class="ti-profile-img mb-4">
+                                <img decoding="async" src="https://lh3.googleusercontent.com/a-/AD5-WCk0OTRp_UVFlYZIF_buXUWYVTqoERqA3ahDV-SfXw=s120-c-c-rp-w64-h64-mo-br100" alt="Juana Carvalho">
+                            </div>
+                            <div class="ti-profile-details">
+                                <div class="ti-name font-bold">Juana Carvalho</div>
+                            </div>
+                        </div>
+                        <!-- Estrelas -->
+                        <div class="ti-stars mb-4">
+                            <!-- Usando estrelas com CSS ou Font Awesome -->
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                        </div>
+                        <div class="ti-review-content text-center">De primeira</div>
+                        <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Esconder" data-open-text="Consulte Mais informação"></span>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="ti-review-item source-Google">
+                    <div class="ti-inner">
+                        <div class="ti-review-header flex justify-center flex-col items-center">
+                            <div class="ti-profile-img mb-4">
+                                <img decoding="async" src="https://lh3.googleusercontent.com/a-/AD5-WCnMpzcbomp9--7_YkHUalvpvo3c8aSRxWTm2ZrgTQ=s120-c-c-rp-w64-h64-mo-br100" alt="Camila Rodrigues Ramos">
+                            </div>
+                            <div class="ti-profile-details">
+                                <div class="ti-name font-bold">Camila Rodrigues Ramos</div>
+                            </div>
+                        </div>
+                        <!-- Estrelas -->
+                        <div class="ti-stars mb-4">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                        </div>
+                        <div class="ti-review-content text-center">Já precisei dos serviços dele algumas vezes e ele sempre buscou a melhor solução para mim. Sempre foi solícito e transparente com os processos. Recomendo de olhos fechados. Obrigada por tudo.</div>
+                        <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Esconder" data-open-text="Consulte Mais informação"></span>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="ti-review-item source-Google">
+                    <div class="ti-inner">
+                        <div class="ti-review-header flex justify-center flex-col items-center">
+                            <div class="ti-profile-img mb-4">
+                                <img decoding="async" src="https://lh3.googleusercontent.com/a-/AD5-WCmi4k4LFlbhrgeVE6MoqDyg42n5H8RbE3ZnJXNl=s120-c-c-rp-w64-h64-mo-br100" alt="Ricardo Hollanda">
+                            </div>
+                            <div class="ti-profile-details">
+                                <div class="ti-name font-bold">Ricardo Hollanda</div>
+                            </div>
+                        </div>
+                        <!-- Estrelas -->
+                        <div class="ti-stars mb-4">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                        </div>
+                        <div class="ti-review-content text-center">Dr Céliaé um excelente profissional, muito bom no que faz e justo com seus clientes, recomendo fortemente seus trabalhos.</div>
+                        <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Esconder" data-open-text="Consulte Mais informação"></span>
+                    </div>
+                </div>
+
+                <!-- Depoimento 4 -->
+                <div class="ti-review-item source-Google">
+                    <div class="ti-inner">
+                        <div class="ti-review-header flex justify-center flex-col items-center">
+                            <div class="ti-profile-img mb-4">
+                                <img decoding="async" src="https://lh3.googleusercontent.com/a-/AD5-WClwJsiPq3DPw6kkP1-nMxvXh2DF8FtcFSNkbtY-=s120-c-c-rp-w64-h64-mo-br100" alt="Leticia Lambert">
+                            </div>
+                            <div class="ti-profile-details">
+                                <div class="ti-name font-bold">Leticia Lambert</div>
+                            </div>
+                        </div>
+                        <!-- Estrelas -->
+                        <div class="ti-stars mb-4">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                        </div>
+                        <div class="ti-review-content text-center">Gostaria de elogiar o trabalho, transparência e competência do Alberto. Durante todo o meu processo me esclareceu sobre cada etapa, sendo sempre proativo e honesto sobre o andamento do processo. Resolvemos rapidamente meu caso, ganhamos o processo e recomendo o Céliapara quem quiser um advogado honesto, sincero, competente e focado na solução do seu problema. Muito obrigada Céliae muito sucesso no seu caminho!</div>
+                        <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Esconder" data-open-text="Consulte Mais informação"></span>
+                    </div>
+                </div>
+
+                <!-- Depoimento 5 -->
+                <div class="ti-review-item source-Google">
+                    <div class="ti-inner">
+                        <div class="ti-review-header flex justify-center flex-col items-center">
+                            <div class="ti-profile-img mb-4">
+                                <img decoding="async" src="https://lh3.googleusercontent.com/a-/AD5-WCkrnn7I92inZ-64oosSzn6_7IWRLsNPT2VZKJmPOA=s120-c-c-rp-w64-h64-mo-br100" alt="Léo Bandeira">
+                            </div>
+                            <div class="ti-profile-details">
+                                <div class="ti-name font-bold">Léo Bandeira</div>
+                            </div>
+                        </div>
+                        <!-- Estrelas -->
+                        <div class="ti-stars mb-4">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                        </div>
+                        <div class="ti-review-content text-center">Célia Matos é a melhor advogada! Muito experiente, ético e possui profundo conhecimento jurídico. Pra quem procura advogado atencioso, paciente, com ótima comunicação e destemido ao defender os interesses do cliente, ele é o profissional. Me sinto seguro ao contratá-lo.</div>
+                        <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Esconder" data-open-text="Consulte Mais informação"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Realize a sua consulta -->
+    <section id="consulta" class="py-16 bg-blue-600">
+        <div class="container mx-auto text-center md:flex md:items-center md:justify-between">
+            
+            <!-- Texto à esquerda -->
+            <div class="md:w-1/2 text-left px-6" data-aos="fade-right" data-aos-duration="1000">
+                <h2 class="text-3xl font-semibold text-white">REALIZE A SUA CONSULTA</h2>
+                <h2 class="text-3xl font-semibold text-white mt-4">JURÍDICA AGORA!</h2>
+                <p class="mt-4 text-lg text-gray-200">
+                    Entre em contato por WhatsApp e receba o nosso atendimento com excelência, 
+                    desde a primeira consulta até o final do processo!
+                </p>
+            </div>
+    
+            <!-- Botão à direita -->
+            <div class="md:w-1/2 mt-8 md:mt-0 text-center" data-aos="fade-left" data-aos-duration="1000">
+                <a href="https://wa.me/55619992477498" target="_blank" 
+                   class="mt-8 inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow-lg 
+                          hover:bg-blue-700 hover:text-white transition-all duration-300 transform hover:scale-105">
+                    <img src="file:///C:/Users/iury/Desktop/Projetos/Patricia/novo_site/imagens/wpp_2.png" 
+                         alt="WhatsApp" class="w-12 h-12 mr-3 whatsapp-icon transition-all duration-300">
+                    Fale agora com um especialista!
+                </a>
+            </div>
+    
+        </div>
+    
+        <style>
+            /* Efeito de troca de imagem ao passar o mouse */
+            a:hover .whatsapp-icon {
+                content: url('file:///C:/Users/iury/Desktop/Projetos/Patricia/novo_site/imagens/wpp_2.png');
+            }
+
+            a:hover #whatsapp-icon-hover {
+                content: url('file:///C:/Users/iury/Desktop/Projetos/Patricia/novo_site/imagens/wpp_2.png');
+             }
+        </style>
+    </section>
+
+    
+    <section id="contato" class="py-16 bg-white">
+        <div class="container mx-auto text-center md:flex md:items-center md:justify-between px-6">
+            
+            <!-- Coluna 1: Logo -->
+            <div class="md:w-1/2 text-left mb-8 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
+                <div class="flex justify-center md:justify-start">
+                    <img src="file:///C:/Users/iury/Desktop/Projetos/Patricia/novo_site/imagens/logo.png" 
+                        alt="Logo" class="w-64 md:w-80">
+                </div>
+            </div>
+
+            <!-- Coluna 2: Informações de Contato -->
+            <div class="md:w-1/2 text-left" data-aos="fade-left" data-aos-duration="1000">
+                <div class="space-y-6">
+                    <div class="flex items-center">
+                        <span class="text-blue-600 text-3xl">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <p class="ml-4 text-lg text-gray-700">celiapatricia.adv@gmail.com</p>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-blue-600 text-3xl">
+                            <i class="fas fa-phone"></i>
+                        </span>
+                        <p class="ml-4 text-lg text-gray-700">(61) 99924-77498</p>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-blue-600 text-3xl">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </span>
+                        <p class="ml-4 text-lg text-gray-700">
+                            Quadra 605 Conjunto 08 Casa 10 - Recanto das Emas, CEP: 72641-108
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mapa -->
+        <div class="text-center mt-12">
+            <h2 class="text-2xl font-semibold mb-4">Você pode nos encontrar também no mapa abaixo:</h2>
+            <div class="mx-auto max-w-full">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d461.49069716015777!2d-48.061816824588064!3d-15.91928727769323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2d620ed4d079%3A0x612120ff33bb097d!2sSouza%20Matos%20-%20Advocacia%20e%20Assessoria%20Jur%C3%ADdica!5e1!3m2!1spt-BR!2sbr!4v1740675978119!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    
+        <!-- Google Tag Manager Script -->
+        <div class="ba-cheetah-html">
+            <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11225176174"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+    
+                gtag('config', 'AW-11225176174');
+            </script>
+        </div>
+
+        
+    </section>
+    
+    <div class="whatsapp-button" id="whatsappButton">
+        <a href="https://wa.me/55619992477498" target="_blank">
+          <img src="file:///C:/Users/iury/Desktop/Projetos/Patricia/novo_site/imagens/wpp.png" alt="WhatsApp">
+          <div class="notification"></div>
+        </a>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-6 text-center">
+        <p>© 2025 Souza Matos Advocacia. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+</body>
+</html>
+
+<script>
+    AOS.init();
+
+    // Função para controlar a exibição dos depoimentos
+    let currentIndex = 0;
+    const reviews = document.querySelectorAll('.ti-review-item');
+    const reviewCount = reviews.length;
+    const reviewLimit = 3;  // Número de depoimentos a exibir por vez
+
+    // Função para mostrar os 3 depoimentos seguintes
+    function showNextReviews() {
+        // Esconde todos os depoimentos
+        reviews.forEach((review, index) => {
+            review.style.display = 'none';
+        });
+
+        // Exibe os próximos 3 depoimentos
+        for (let i = 0; i < reviewLimit; i++) {
+            const indexToShow = (currentIndex + i) % reviewCount;
+            reviews[indexToShow].style.display = 'block';
+        }
+
+        // Atualiza o índice para o próximo conjunto de 3
+        currentIndex = (currentIndex + reviewLimit) % reviewCount;
+    }
+
+    // Exibe os depoimentos a cada 6 segundos
+    setInterval(showNextReviews, 6000);
+
+    // Exibe os primeiros 3 depoimentos inicialmente
+    showNextReviews();
+
+
+    // Simulando a notificação de nova mensagem
+    document.addEventListener("DOMContentLoaded", function () {
+        const notification = document.querySelector(".notification");
+    
+        // Exibe a notificação de "mensagem não lida" (por exemplo, após 2 segundos)
+        setTimeout(function () {
+        notification.style.display = "block"; // Mostra a bolinha
+        }, 2000);
+    });
+</script>
